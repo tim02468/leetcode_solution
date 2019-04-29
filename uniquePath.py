@@ -11,9 +11,9 @@ class Solution:
         
         return int(numerator / denominator)
         
-        board = [[1 for _ in range(m)] for _ in range(n)]
-        
         # dp solution
+        board = [[1 for _ in range(m)] for _ in range(n)]
+       
         for i in range(1, n):
             for j in range(1, m):
                 board[i][j] = board[i - 1][j] + board[i][j - 1]
